@@ -1,0 +1,10 @@
+@use '_widths.sass'
+
+@mixin md 
+  @media (min-width: widths.$md) 
+    @content   
+
+@mixin lg 
+  @media (min-width: widths.$lg) 
+    @content
+  

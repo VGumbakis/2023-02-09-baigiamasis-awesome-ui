@@ -1,0 +1,336 @@
+@use '_base.sass'
+@use '_mixins.sass'
+
+$gap: 40px
+$heading-color: #333333
+$green: #647B64
+$white-txt: #FEFEFE
+$paragraphs-color: #4F4F4F
+$pre-color: #F3B562
+
+/*@include mixins.md      @include mixins.lg* 
+
+body
+    font-family: 'Bai Jamjuree', sans-serif
+    font-family: 'Prompt', sans-serif
+    color: $paragraphs-color
+    font-weight: 400
+    max-width: 100vw
+h1
+    font-size: 48px
+
+h1, h3, li, a
+    color: $heading-color
+
+h1, h2, h3
+    font-weight: 500
+
+p
+    letter-spacing: 0.04em
+  
+.wrapper
+    margin-top: $gap
+    margin-right: $gap
+    margin-left: $gap
+    margin-bottom: 0
+
+    @include mixins.md
+        margin: 50px 140px
+
+
+
+header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 80px
+
+.main-nav
+    display: none
+
+    li
+        list-style-type: none
+
+
+        a
+            text-decoration: none
+            padding: 20px
+            font-variant: small-caps
+            font-size: 16px
+            line-height: 20px
+            font-weight: 500
+
+        .register-btn
+            background: linear-gradient(102deg, #647B64 -5%, #66AC66 178%), linear-gradient(102deg, #0BB1E3 5%, #0F2976 1782%), #0E70AF
+            border-radius: 3px
+            color: $white-txt
+            padding: 10px 15px
+         
+    
+    @include mixins.lg
+        display: flex
+
+.hamburger-img
+    display: block
+    
+    @include mixins.lg
+        display: none
+
+
+.hero
+    display: flex
+    justify-content: space-between
+    margin-bottom: 72px
+
+.hero-slogan
+    font-variant: small-caps
+
+.paragraph-to-button
+    margin-bottom: $gap
+
+.green-btn
+    text-decoration: none
+
+.inside-btn
+    display: flex
+    justify-content: space-between
+    text-decoration: none
+    padding: 15px
+    text-transform: uppercase
+    color: $white-txt
+    width: 175px
+    background: linear-gradient(102deg, #647B64 -5%, #66AC66 178%)
+    box-shadow: 0px 10px 20px rgba(128, 143, 150, 0.2)
+    border-radius: 2px
+    font-weight: 600
+
+.btn-text
+    padding: 0
+    margin: 0
+
+.btn-image
+    padding: 0
+    margin: 0
+
+
+
+.second
+    display: flex
+    align-items: top
+    flex-direction: column
+    gap: 150px
+
+    @include mixins.md
+        flex-direction: row
+
+.second-text-block
+    @include mixins.lg
+    width: 50%
+
+.pre-slogan
+    text-transform: uppercase
+    color: $pre-color
+    font-size: 24px
+    line-height: 33px
+    font-weight: 500
+    margin-bottom: 17px
+
+.paragraph-header
+    font-size: 41px
+    line-height: 45px
+    text-transform: uppercase
+    color: $green
+    margin-bottom: 56px
+
+
+.second-card-block
+    display: block
+    
+
+    @include mixins.md
+        display: grid
+        grid-template: 1fr 1fr/ 1fr 1fr
+    
+    @include mixins.lg
+        width: 50%
+
+.second-card
+    padding: $gap
+
+.second-card-first
+    background: #FFFFFF
+    box-shadow: 0px 6px 31px rgba(155, 148, 148, 0.2)
+    border-radius: 8px
+    
+.third
+    margin-bottom: 125px
+    margin-top: 150px
+
+.third-text-block
+    text-align: center
+    
+
+.third-card-block
+        display: flex
+        flex-direction: column
+        gap: $gap
+
+        @include mixins.md
+            flex-direction: row
+
+.third-card
+    background: linear-gradient(400deg, rgba(100, 123, 100, 0.8) -118.86%, rgba(100, 123, 100, 0) 25%, rgba(100, 123, 100, 0) 100%),#FFFFFF
+    border-radius: 8px 
+    padding: 72px 50px 
+    width: 350px
+    height: 350px
+
+.third-card-first
+    position: relative
+
+.third-card-first::after
+    content: ''
+    background-image: url("./images/Dots.svg")
+    position: absolute
+    width: 215px
+    height: 215px
+    bottom: -40px
+    left: -40px
+    z-index: -1
+    opacity: 0.4
+
+.third-card-middle
+    background: $green
+    border-radius: 8px
+    h3, p
+        color: #FFFFFF
+
+.fuorth
+    display: flex
+    gap: 165px
+    flex-direction: column
+
+    @include mixins.md
+        flex-direction: row
+
+.fuorth-image
+    width: 550px
+    height: 550px
+    object-fit: cover
+    position: relative
+
+.fuorth-image::after
+    content: ''
+    background: linear-gradient(197.92deg, rgba(239, 128, 49, 0) -227.37%, rgba(239, 128, 49, 0.15) 1.58%, rgba(239, 128, 49, 0) 103%)
+    position: absolute
+    width: 100%
+    height: 100%
+    bottom: -60px
+    right: -60px
+    z-index: -1
+
+.fifth-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.fifth-text-block
+    margin-top: 200px
+.fifth-buttons
+    display: none
+
+    @include mixins.lg
+        display: block
+
+.fifth-cards-block
+    gap: $gap
+
+    @include mixins.md
+        display: grid
+        grid-template: 1fr 1fr/ 1fr 1fr
+
+    @include mixins.lg
+        display: flex
+
+.fifth-card
+    background: linear-gradient(358deg, rgba(100, 123, 100, 0.8) -120%, rgba(100, 123, 100, 0) 25%, rgba(100, 123, 100, 0) 100%), #FFFFFF
+    border-radius: 5px
+    padding: $gap
+    
+
+.fifth-card-top
+    display: flex
+        
+
+.fifth-name
+    font-variant: small-caps
+    font-size: 16px
+
+.fifth-paragraph
+    font-style: italic
+
+.footer-wrapper
+    background: #F0DCC5
+    width: 100vw
+    margin-bottom: 0
+    margin-top: 170px
+
+footer
+    margin-top: 100px
+    gap: 120px
+    @include mixins.md
+        display: grid
+        grid-template: 1fr 1fr/ 1fr 1fr
+        
+    @include mixins.lg
+        display: flex
+
+
+.footer-logo
+    margin-bottom: 17px
+
+.footer-card
+    ul
+        padding: 0
+
+        li
+            list-style-type: none
+            padding: 0
+            line-height: 26px
+
+    margin-bottom: 100px
+
+    @include mixins.lg
+        width: 25%
+
+.footer-paragraph
+    margin-bottom: 16px
+    line-height: 18px
+
+.socials
+    display: flex
+    margin-top: 20px
+
+.footer-card-heading
+    color: $green
+
+.footer-send
+    margin-bottom: 13px
+
+textarea
+    width: 100%
+    margin-bottom: 28px
+
+.send-btn
+    display: flex
+    justify-content: space-between
+    text-decoration: none
+    padding: 15px
+    text-transform: uppercase
+    color: #FEFEFE
+    width: 100%
+    background: linear-gradient(102deg, #647B64 -5%, #66AC66 178%)
+    box-shadow: 0px 10px 20px rgba(128, 143, 150, 0.2)
+    border-radius: 2px
+    font-weight: 600
+
